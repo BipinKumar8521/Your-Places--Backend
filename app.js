@@ -52,6 +52,10 @@ mongoose
   .then(
     app.listen(process.env.PORT || 5000, () => {
       console.log("Listening... & connected to db");
+
+      setInterval(() => {
+        console.log("pinging...");
+      }, 1000 * 60 * 20);
     })
   )
   .catch((err) => {
