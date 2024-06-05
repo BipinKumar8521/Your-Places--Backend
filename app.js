@@ -25,6 +25,9 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use("/api/awake", (req, res, next) => {
+  res.json({ message: "awake" });
+});
 app.use("/api/places", placeRoutes);
 app.use("/api/users", userRoutes);
 
@@ -54,8 +57,12 @@ mongoose
       console.log("Listening... & connected to db");
 
       setInterval(() => {
-        console.log("pinging...");
-      }, 1000 * 60 * 20);
+        fetch("https://yourplaces-backend-66ez.onrender.com/api/awake").then(
+          (res) => {
+            console.log("awake");
+          }
+        );
+      }, 1000);
     })
   )
   .catch((err) => {
