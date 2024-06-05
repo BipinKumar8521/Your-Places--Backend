@@ -56,13 +56,13 @@ mongoose
     app.listen(process.env.PORT || 5000, () => {
       console.log("Listening... & connected to db");
 
-      setInterval(() => {
-        fetch("https://yourplaces-backend-66ez.onrender.com/api/awake").then(
-          (res) => {
-            console.log("awake");
-          }
-        );
-      }, 1000 * 60 * 5);
+      //   setInterval(() => {
+      //     fetch("https://yourplaces-backend-66ez.onrender.com/api/awake").then(
+      //       (res) => {
+      //         console.log("awake");
+      //       }
+      //     );
+      //   }, 1000 * 60 * 5);
     })
   )
   .catch((err) => {
