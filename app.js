@@ -62,7 +62,7 @@ mongoose
             console.log("awake");
           }
         );
-      }, 1000 * 60 * 10);
+      }, 1000 * 60 * 50);
     })
   )
   .catch((err) => {
